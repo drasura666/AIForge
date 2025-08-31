@@ -1,0 +1,13 @@
+def cake_calculator(flour, sugar):
+    # Number of cakes we can make is limited by both flour and sugar.
+    cakes = min(flour // 100, sugar // 50)
+    
+    # Compute leftovers after making 'cakes' cakes.
+    flour_left = flour - cakes * 100
+    sugar_left = sugar - cakes * 50
+    
+    return [cakes, flour_left, sugar_left]
+
+# Example usage:
+if __name__ == "__main__":
+    print(cake_calculator(250, 120))  # Expected [2, 50, 20]
