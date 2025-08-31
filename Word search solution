@@ -1,0 +1,59 @@
+import random, string
+
+def create_crossword(words):
+    # Create empty 10x10 grid (filled with '.' for clarity)
+    N = 10
+    grid = [['.' for _ in range(N)] for _ in range(N)]
+    
+    # Possible directions: horizontal, vertical, diagonal
+    directions = [(1,0),(-1,0),(0,1),(0,-1),
+                  (1,1),(1,-1),(-1,1),(-1,-1)]
+    
+    for word in words:
+        placed = False
+        attempts = 0
+        
+        # Try until placed or too many attempts
+        while not placed and attempts < 100:
+            attempts += 1
+            w = random.choice([word, word[::-1]])  # allow reversed
+            dx, dy = random.choice(directions)
+            x = random.randrange(N)
+            y = random.randrange(N)
+            
+            # Check if word fits
+            fits = True
+            for i, ch in enumerate(w):
+                xi = x + dx*i
+                yi = y + dy*i
+                if xi < 0 or xi >= N or yi < 0 or yi >= N:
+                    fits = False
+                    break
+                if grid[yi][xi] != '.' and grid[yi][xi] != ch:
+                    fits = False
+                    break
+            
+            # Place word if it fits
+            if fits:
+                for i, ch in enumerate(w):
+                    xi = x + dx*i
+                    yi = y + dy*i
+                    grid[yi][xi] = ch
+                placed = True
+        
+        if not placed:
+            raise ValueError(f"Could not place word {word}")
+    
+    # Fill remaining blanks with random letters
+    for i in range(N):
+        for j in range(N):
+            if grid[i][j] == '.':
+                grid[i][j] = random.choice(string.ascii_uppercase)
+    
+    return grid
+
+# Example usage:
+if __name__ == "__main__":
+    puzzle = create_crossword(["LEARNING", "SCIENCE", "FUN"])
+    for row in puzzle:
+        print(" ".join(row))
