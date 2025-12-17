@@ -13,6 +13,8 @@
         }
         .resume-container {
             width: 210mm;
+            /* Auto height to fit all content */
+            height: auto; 
             min-height: 297mm;
             background: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -21,7 +23,7 @@
         }
         /* Left Column */
         .left-col {
-            background-color: #dbe2e6; /* Grey tone from image */
+            background-color: #dbe2e6;
             padding: 30px 20px;
             color: #333;
         }
@@ -114,6 +116,16 @@
             padding-left: 15px;
             margin-top: 5px;
         }
+        li {
+            margin-bottom: 4px;
+        }
+        .compact-list li {
+            margin-bottom: 2px;
+        }
+        .rank-highlight {
+            font-weight: bold; 
+            color: #444;
+        }
     </style>
 </head>
 <body>
@@ -127,7 +139,7 @@
         <div class="section-title-left">CONTACT</div>
         <div class="left-item">
             <strong>Phone</strong>
-            +91-9919421941
+            +91-9695772186
         </div>
         <div class="left-item">
             <strong>Address</strong>
@@ -135,24 +147,37 @@
         </div>
 
         <div class="section-title-left">EDUCATION</div>
+        
         <div class="left-item">
             <strong>2023 - Present</strong>
             Govt Polytechnic Shahjahanpur<br>
-            <em>Diploma in Civil Engineering</em>
+            <em>Diploma in Civil Engineering</em><br>
+            <ul style="margin: 5px 0 0 -20px; font-size: 12px; color: #444; list-style-type: none;">
+                <li>• <strong>Rank 4</strong> in 2nd Year</li>
+                <li>• <strong>Rank 2</strong> in 1st Year</li>
+                <li>• Admitted via JEECUP (Rank 2015)</li>
+            </ul>
         </div>
+
         <div class="left-item">
             <strong>2021 - 2023</strong>
             City Montessory Inter College<br>
-            <em>High School (85.83%)</em>
+            <em>High School</em><br>
+            <ul style="margin: 5px 0 0 -20px; font-size: 12px; color: #444; list-style-type: none;">
+                <li>• <strong>Rank 7</strong> in School (Class 10)</li>
+                <li>• <strong>Rank 1</strong> in Class 9</li>
+                <li>• Aggregate: 85.83%</li>
+            </ul>
         </div>
 
         <div class="section-title-left">SKILLS</div>
         <div class="left-item">
             • Civil Engineering<br>
-            • Mathematics & Physics<br>
-            • Effective Speaking<br>
+            • Physics & Mathematics<br>
             • Impactful Writing<br>
-            • Computer Applications
+            • Effective Speaking<br>
+            • Self-Presentation<br>
+            • YouTube Analytics
         </div>
 
         <div class="section-title-left">LANGUAGES</div>
@@ -168,7 +193,7 @@
 
         <div class="section-title-right">PROFILE</div>
         <p style="font-size: 13px; line-height: 1.5; color: #444;">
-            Dedicated Civil Engineering student with a strong academic foundation (85.83% in High School) and practical training experience in public infrastructure. Proven track record in national-level talent searches and mathematics competitions. Certified in professional communication skills and committed to engineering excellence.
+            Dedicated Civil Engineering student with consistent academic excellence, securing Rank 2 in 1st year and Rank 4 in 2nd year of Diploma. Proven track record in national-level talent searches (PWNSAT Rank 366) and international mathematics competitions. Certified by the Wadhwani Foundation in professional communication and soft skills, with practical training experience in public infrastructure.
         </p>
 
         <div class="section-title-right">WORK EXPERIENCE</div>
@@ -185,21 +210,59 @@
             </div>
         </div>
 
-        <div class="section-title-right">ACHIEVEMENTS</div>
+        <div class="section-title-right">CERTIFICATIONS & ACHIEVEMENTS</div>
         
         <div class="exp-item">
-            <div class="exp-role">PWNSAT Ranker (2023)</div>
-            <div class="exp-desc">Secured Rank 366 in Physics Wallah National Scholarship Test with 99.31 percentile.</div>
-        </div>
-        
-        <div class="exp-item">
-            <div class="exp-role">International Youth Math Challenge (2025)</div>
-            <div class="exp-desc">Qualified and honored for digital submission in the Qualification Round.</div>
+            <div class="exp-role">Professional Skills (Wadhwani Foundation) <span class="exp-date">2025</span></div>
+            <div class="exp-desc">
+                Successfully completed 79 hours of training in each of the following:
+                <ul class="compact-list">
+                    <li><strong>Impactful Writing Skills</strong></li>
+                    <li><strong>Effective Speaking and Listening Skills</strong></li>
+                    <li><strong>Self-Presentation Skills</strong></li>
+                </ul>
+            </div>
         </div>
 
         <div class="exp-item">
-            <div class="exp-role">Wadhwani Foundation Certifications</div>
-            <div class="exp-desc">Completed 79 hours of training in Impactful Writing and Effective Speaking skills.</div>
+            <div class="exp-role">Academic Excellence</div>
+            <div class="exp-desc">
+                <ul class="compact-list">
+                    <li><strong>PWNSAT 2023:</strong> Secured <strong>Rank 366</strong> with <strong>99.31 Percentile</strong> (Score: 140/160).</li>
+                    <li><strong>JEECUP 2023:</strong> Achieved <strong>Open Rank 2015</strong> (Group A) in Uttar Pradesh Polytechnic Entrance.</li>
+                    <li><strong>School Honors:</strong> Consistent top performer with <strong>Rank 1 in Class 9</strong> and <strong>Rank 7 in School</strong> during High School.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-role">International Competitions</div>
+            <div class="exp-desc">
+                <ul class="compact-list">
+                    <li><strong>International Youth Math Challenge (IYMC) 2025:</strong> Qualification Round Participant; Honoured for digital submission.</li>
+                    <li><strong>International Astronomy & Astrophysics Competition 2025:</strong> Qualification Round Participant.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-role">Government & Scientific Certifications</div>
+            <div class="exp-desc">
+                Active participant in national awareness initiatives:
+                <ul class="compact-list">
+                    <li><strong>ISRO & Space:</strong> Chandrayaan-3 Mahaquiz, National Space Day Quiz, National Science Day Quiz (Vigyanotsav).</li>
+                    <li><strong>Environment:</strong> Energy Efficiency (EESL), Ending Plastic Pollution, Energy Conservation (BEE), Shoonya Zero Pollution Mobility.</li>
+                    <li><strong>Digital Safety:</strong> Cyber Security Awareness (ISEA), Data Privacy Awareness (DSCI), Safer Digital Space (MeitY).</li>
+                    <li><strong>National Development:</strong> Viksit Bharat 2025, Digital India (Decade of Progress), Har Ghar Tiranga, National Unity Quiz.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-role">Volunteering</div>
+            <div class="exp-desc">
+                <strong>Sewa Sankalp (2019):</strong> Certificate of Effort for voluntary contributions to alleviate the destitutes.
+            </div>
         </div>
 
         <div class="section-title-right">REFERENCE</div>
